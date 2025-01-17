@@ -8,6 +8,7 @@
   ],
   "main": "dist/components-library-umd.cjs",
   "module": "dist/components-library",
+  "types": "dist/components-library.d.ts",
   "exports": {
     ".": {
       "import": "dist/components-library",

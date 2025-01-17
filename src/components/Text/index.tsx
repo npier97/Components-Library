@@ -46,7 +46,7 @@ type TextProps = {
 } & ComponentProps<"p"> &
   VariantProps<typeof textStyles>;
 
-export const Text = forwardRef<HTMLElement, TextProps>(
+const Text = forwardRef<HTMLElement, TextProps>(
   (
     {
       as: Component = "p",
@@ -80,3 +80,5 @@ export const Text = forwardRef<HTMLElement, TextProps>(
     );
   }
 );
+
+export default Text;

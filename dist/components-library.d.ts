@@ -10,7 +10,7 @@ import { VariantProps } from 'class-variance-authority';
 
 export declare const Box: ForwardRefExoticComponent<Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & RefAttributes<HTMLDivElement>>;
 
-export declare type BoxProps = ComponentProps<"div">;
+declare type BoxProps = ComponentProps<"div">;
 
 export declare const Button: ForwardRefExoticComponent<Omit<ButtonProps, "ref"> & RefAttributes<HTMLButtonElement>>;
 
@@ -30,7 +30,7 @@ declare const inputStyles: (props?: ClassProp | undefined) => string;
 
 export declare const Stack: ({ className, ...props }: StackProps) => JSX_2.Element;
 
-export declare type StackProps = BoxProps;
+declare type StackProps = BoxProps;
 
 declare const Text_2: ForwardRefExoticComponent<Omit<TextProps, "ref"> & RefAttributes<HTMLElement>>;
 export { Text_2 as Text }

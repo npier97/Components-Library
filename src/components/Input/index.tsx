@@ -19,7 +19,7 @@ const inputStyles = cva([
 
 type InputProps = ComponentProps<"input"> & VariantProps<typeof inputStyles>;
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(
+const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, ...props }, ref) => {
     return (
       <input
@@ -32,3 +32,5 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     );
   }
 );
+
+export default Input;
