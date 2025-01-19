@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { NavBar } from "./Navbar";
+import NavBar from ".";
 
 const meta: Meta<typeof NavBar> = {
   title: "Components/Navigation",
@@ -39,13 +39,16 @@ export const Outline: Story = {
     size: "md",
     fixed: false,
     logo: "Storybook",
-    links: [{
-      "name": "Home",
-      "href": "#"
-    }, {
-      "name": "About",
-      "href": "#"
-    }],
+    links: [
+      {
+        name: "Home",
+        href: "#",
+      },
+      {
+        name: "About",
+        href: "#",
+      },
+    ],
   },
 };
 
