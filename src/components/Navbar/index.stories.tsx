@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { NavBar } from ".";
+import { Navbar } from ".";
 
-const meta: Meta<typeof NavBar> = {
+const meta: Meta<typeof Navbar> = {
   title: "Components/Navigation",
-  component: NavBar,
+  component: Navbar,
   parameters: {
     layout: "fullscreen",
   },
@@ -12,7 +12,7 @@ const meta: Meta<typeof NavBar> = {
 
 export default meta;
 
-type Story = StoryObj<typeof NavBar>;
+type Story = StoryObj<typeof Navbar>;
 
 export const Solid: Story = {
   args: {

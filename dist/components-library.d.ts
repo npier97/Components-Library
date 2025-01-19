@@ -28,7 +28,7 @@ export declare type InputProps = ComponentProps<"input"> & VariantProps<typeof i
 
 declare const inputStyles: (props?: ClassProp | undefined) => string;
 
-export declare const NavBar: ({ variant, size, fixed, logo, links, className, ...props }: NavProps) => JSX_2.Element;
+export declare const Navbar: ({ variant, size, fixed, logo, links, className, ...props }: NavProps) => JSX_2.Element;
 
 export declare type NavProps = ComponentProps<"nav"> & VariantProps<typeof navStyles> & {
     logo: string | React.ReactNode;

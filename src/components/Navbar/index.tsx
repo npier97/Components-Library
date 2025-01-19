@@ -36,7 +36,7 @@ export type NavProps = ComponentProps<"nav"> &
     links: { name: string; href: string }[];
   };
 
-export const NavBar = ({
+export const Navbar = ({
   variant,
   size,
   fixed,
