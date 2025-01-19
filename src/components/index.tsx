@@ -1,5 +1,5 @@
-export { default as Button } from "./Button";
-export { default as Input } from "./Input";
+export * from "./Button";
+export * from "./Input";
 export * from "./Layout";
-export { default as Navbar } from "./Navbar";
-export { default as Text } from "./Text";
+export * from "./Navbar";
+export * from "./Text";

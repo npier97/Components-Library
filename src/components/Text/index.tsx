@@ -41,12 +41,12 @@ const textStyles = cva("w-full", {
   },
 });
 
-type TextProps = {
+export type TextProps = {
   as?: ElementType;
 } & ComponentProps<"p"> &
   VariantProps<typeof textStyles>;
 
-const Text = forwardRef<HTMLElement, TextProps>(
+export const Text = forwardRef<HTMLElement, TextProps>(
   (
     {
       as: Component = "p",
@@ -80,5 +80,3 @@ const Text = forwardRef<HTMLElement, TextProps>(
     );
   }
 );
-
-export default Text;

@@ -1,2 +1,2 @@
-export { Box } from "./Box";
-export { Stack } from "./Stack";
+export * from "./Box";
+export * from "./Stack";

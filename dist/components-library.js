@@ -3136,7 +3136,7 @@ export {
   ue as Box,
   Ct as Button,
   _t as Input,
-  St as Navbar,
+  St as NavBar,
   kt as Stack,
   Tt as Text
 };

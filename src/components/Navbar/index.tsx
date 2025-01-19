@@ -30,13 +30,13 @@ const navStyles = cva(
   }
 );
 
-type NavProps = ComponentProps<"nav"> &
+export type NavProps = ComponentProps<"nav"> &
   VariantProps<typeof navStyles> & {
     logo: string | React.ReactNode;
     links: { name: string; href: string }[];
   };
 
-const NavBar = ({
+export const NavBar = ({
   variant,
   size,
   fixed,
@@ -76,5 +76,3 @@ const NavBar = ({
     </nav>
   );
 };
-
-export default NavBar;

@@ -26,5 +26,8 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react(), dts({ rollupTypes: true })],
+  plugins: [
+    react(),
+    dts({ rollupTypes: true, tsconfigPath: "./tsconfig.app.json" }),
+  ],
 });

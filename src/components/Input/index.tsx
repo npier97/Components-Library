@@ -17,9 +17,10 @@ const inputStyles = cva([
   "placeholder:text-sm",
 ]);
 
-type InputProps = ComponentProps<"input"> & VariantProps<typeof inputStyles>;
+export type InputProps = ComponentProps<"input"> &
+  VariantProps<typeof inputStyles>;
 
-const Input = forwardRef<HTMLInputElement, InputProps>(
+export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, ...props }, ref) => {
     return (
       <input
@@ -32,5 +33,3 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     );
   }
 );
-
-export default Input;
