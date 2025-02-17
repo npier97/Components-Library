@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Navbar } from ".";
+import StorybookLogo from "../../assets/storybook.png";
 
 const meta: Meta<typeof Navbar> = {
   title: "Components/Navigation",
@@ -57,7 +58,8 @@ export const Transparent: Story = {
     variant: "transparent",
     size: "md",
     fixed: true,
-    logo: "Storybook",
+    logo: <img src={StorybookLogo} alt="Logo" width={"20px"} />,
+    brand: "Storybook",
     links: [
       {
         name: "Home",

@@ -18,18 +18,26 @@ const inputStyles = cva([
 ]);
 
 export type InputProps = ComponentProps<"input"> &
-  VariantProps<typeof inputStyles>;
+  VariantProps<typeof inputStyles> & {
+    label?: string;
+    name: string;
+  };
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, ...props }, ref) => {
+  ({ label, name, className, ...props }, ref) => {
     return (
-      <input
-        ref={ref}
-        type="text"
-        autoComplete="off"
-        className={cn(inputStyles({ className }))}
-        {...props}
-      />
+      <>
+        <label htmlFor={name}>{label}</label>
+        <input
+          ref={ref}
+          type="text"
+          id={name}
+          name={name}
+          autoComplete="off"
+          className={cn(inputStyles({ className }))}
+          {...props}
+        />
+      </>
     );
   }
 );

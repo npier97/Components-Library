@@ -16,6 +16,8 @@ type Story = StoryObj<typeof Input>;
 
 export const Text: Story = {
   args: {
+    label: "Some text",
+    name: "text",
     type: "text",
     placeholder: "Insert text here",
   },
@@ -23,6 +25,7 @@ export const Text: Story = {
 
 export const Password: Story = {
   args: {
+    name: "password",
     type: "password",
     placeholder: "Password",
   },
@@ -30,6 +33,7 @@ export const Password: Story = {
 
 export const Number: Story = {
   args: {
+    name: "number",
     type: "number",
     placeholder: "Number",
   },
@@ -37,6 +41,7 @@ export const Number: Story = {
 
 export const Date: Story = {
   args: {
+    name: "date",
     type: "date",
     placeholder: "Date",
   },

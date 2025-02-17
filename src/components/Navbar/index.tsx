@@ -33,6 +33,7 @@ const navStyles = cva(
 export type NavProps = ComponentProps<"nav"> &
   VariantProps<typeof navStyles> & {
     logo: string | React.ReactNode;
+    brand?: string;
     links: { name: string; href: string }[];
   };
 
@@ -41,6 +42,7 @@ export const Navbar = ({
   size,
   fixed,
   logo,
+  brand,
   links,
   className,
   ...props
@@ -59,7 +61,10 @@ export const Navbar = ({
     >
       <Box>
         <Box className="font-bold text-xl flex justify-between">
-          <Box className="inline-block pr-6">{logo}</Box>
+          <Box className="pr-6 flex gap-2">
+            <Box>{logo}</Box>
+            <Box>{brand}</Box>
+          </Box>
           <Box>
             {links.map((link) => (
               <a

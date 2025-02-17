@@ -26,8 +26,8 @@ export const LoginForm = () => {
           Username
         </Text>
         <Input
+          name="username"
           type="text"
-          id="username"
           placeholder="Username"
           className="mb-4"
         />
@@ -35,8 +35,8 @@ export const LoginForm = () => {
           Password
         </Text>
         <Input
+          name="password"
           type="password"
-          id="password"
           placeholder="Password"
           className="mb-6"
         />
