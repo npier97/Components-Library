@@ -2,6 +2,7 @@ import { cn } from "@/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps, useEffect, useState } from "react";
 import { Box } from "../Layout";
+import { Brand } from "./Brand";
 
 const navStyles = cva(["w-full", "px-6", "py-4", "transition-all"], {
   variants: {
@@ -76,10 +77,7 @@ export const Navbar = ({
       {...props}
     >
       <Box className="font-bold text-xl flex justify-between">
-        <Box className="pr-6 flex gap-2">
-          <Box>{logo}</Box>
-          <Box>{brand}</Box>
-        </Box>
+        <Brand logo={logo} brand={brand} />
         <Box>
           {links.map((link) => (
             <a

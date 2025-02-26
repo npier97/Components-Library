@@ -60,23 +60,21 @@ export const Text = forwardRef<HTMLElement, TextProps>(
       ...props
     },
     ref
-  ) => {
-    return (
-      <Component
-        ref={ref}
-        className={cn(
-          textStyles({
-            emphasis,
-            size,
-            weight,
-            align,
-            italic,
-            underline,
-            className,
-          })
-        )}
-        {...props}
-      />
-    );
-  }
+  ) => (
+    <Component
+      ref={ref}
+      className={cn(
+        textStyles({
+          emphasis,
+          size,
+          weight,
+          align,
+          italic,
+          underline,
+          className,
+        })
+      )}
+      {...props}
+    />
+  )
 );

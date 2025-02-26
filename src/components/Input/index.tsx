@@ -23,20 +23,18 @@ export type InputProps = ComponentProps<"input"> &
   };
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, name, className, ...props }, ref) => {
-    return (
-      <>
-        <label htmlFor={name}>{label}</label>
-        <input
-          ref={ref}
-          type="text"
-          id={name}
-          name={name}
-          autoComplete="off"
-          className={cn(inputStyles({ className }))}
-          {...props}
-        />
-      </>
-    );
-  }
+  ({ label, name, className, ...props }, ref) => (
+    <>
+      <label htmlFor={name}>{label}</label>
+      <input
+        ref={ref}
+        type="text"
+        id={name}
+        name={name}
+        autoComplete="off"
+        className={cn(inputStyles({ className }))}
+        {...props}
+      />
+    </>
+  )
 );
