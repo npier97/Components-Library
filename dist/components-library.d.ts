@@ -19,19 +19,23 @@ export declare type ButtonProps = ComponentProps<"button"> & VariantProps<typeof
 declare const buttonStyles: (props?: ({
     variant?: "solid" | "outline" | "ghost" | null | undefined;
     size?: "sm" | "md" | "lg" | null | undefined;
-    colorscheme?: "primary" | null | undefined;
+    colorscheme?: "primary" | "secondary" | "success" | "warning" | "danger" | null | undefined;
 } & ClassProp) | undefined) => string;
 
 export declare const Input: ForwardRefExoticComponent<Omit<InputProps, "ref"> & RefAttributes<HTMLInputElement>>;
 
-export declare type InputProps = ComponentProps<"input"> & VariantProps<typeof inputStyles>;
+export declare type InputProps = ComponentProps<"input"> & VariantProps<typeof inputStyles> & {
+    label?: string;
+    name: string;
+};
 
 declare const inputStyles: (props?: ClassProp | undefined) => string;
 
-export declare const Navbar: ({ variant, size, fixed, logo, links, className, ...props }: NavProps) => JSX_2.Element;
+export declare const Navbar: ({ outline, size, fixed, shadowOnScroll, logo, brand, links, className, ...props }: NavProps) => JSX_2.Element;
 
 export declare type NavProps = ComponentProps<"nav"> & VariantProps<typeof navStyles> & {
     logo: string | React.ReactNode;
+    brand?: string;
     links: {
         name: string;
         href: string;
@@ -39,9 +43,10 @@ export declare type NavProps = ComponentProps<"nav"> & VariantProps<typeof navSt
 };
 
 declare const navStyles: (props?: ({
-    variant?: "solid" | "outline" | "transparent" | null | undefined;
+    outline?: boolean | null | undefined;
     size?: "sm" | "md" | "lg" | null | undefined;
     fixed?: boolean | null | undefined;
+    shadowOnScroll?: boolean | null | undefined;
 } & ClassProp) | undefined) => string;
 
 export declare const Stack: ({ className, ...props }: StackProps) => JSX_2.Element;
