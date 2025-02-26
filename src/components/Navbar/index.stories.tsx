@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Navbar } from ".";
-import StorybookLogo from "../../assets/storybook.png";
 
 const meta: Meta<typeof Navbar> = {
   title: "Components/Navigation",
@@ -17,9 +16,11 @@ type Story = StoryObj<typeof Navbar>;
 
 export const Solid: Story = {
   args: {
-    variant: "solid",
+    className: "bg-blue-500 text-white",
+    outline: false,
     size: "md",
     fixed: false,
+    shadowOnScroll: false,
     logo: "Storybook",
     links: [
       {
@@ -36,9 +37,11 @@ export const Solid: Story = {
 
 export const Outline: Story = {
   args: {
-    variant: "outline",
+    className: "bg-white text-black",
+    outline: true,
     size: "md",
     fixed: false,
+    shadowOnScroll: false,
     logo: "Storybook",
     links: [
       {
@@ -48,26 +51,6 @@ export const Outline: Story = {
       {
         name: "About",
         href: "#",
-      },
-    ],
-  },
-};
-
-export const Transparent: Story = {
-  args: {
-    variant: "transparent",
-    size: "md",
-    fixed: true,
-    logo: <img src={StorybookLogo} alt="Logo" width={"20px"} />,
-    brand: "Storybook",
-    links: [
-      {
-        name: "Home",
-        href: "/",
-      },
-      {
-        name: "About",
-        href: "/",
       },
     ],
   },
