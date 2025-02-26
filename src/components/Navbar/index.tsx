@@ -85,7 +85,8 @@ export const Navbar = ({
             <a
               key={link.name}
               href={link.href}
-              className="text-base hover:text-primary-500 transition-colors pl-0 pr-6"
+              //TODO: add dynamic hover for the link later
+              className="text-base transition-colors pl-0 pr-6"
             >
               {link.name}
             </a>

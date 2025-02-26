@@ -4,7 +4,6 @@ import { ComponentProps, forwardRef } from "react";
 
 const buttonStyles = cva(
   [
-    "w-full",
     "rounded-md",
     "font-semibold",
     "focus: outline-none",
@@ -23,25 +22,27 @@ const buttonStyles = cva(
         lg: "px-6 py-3 text-lg",
       },
       colorscheme: {
-        primary: "text-white",
+        primary: "text-white bg-blue-500 hover:bg-blue-400",
+        secondary: "text-white bg-gray-500 hover:bg-gray-400",
+        success: "text-white bg-green-500 hover:bg-green-400",
+        warning: "text-black bg-yellow-500 hover:bg-yellow-400",
+        danger: "text-white bg-red-500 hover:bg-red-400",
       },
     },
     compoundVariants: [
       {
         variant: "solid",
         colorscheme: "primary",
-        className: "bg-primary-500 hover:bg-primary-100",
       },
       {
         variant: "outline",
         colorscheme: "primary",
-        className:
-          "text-primary-600 border-primary-500 bg-transparent hover:bg-primary-100",
+        className: "border-blue-500 text-blue-500 bg-transparent",
       },
       {
         variant: "ghost",
         colorscheme: "primary",
-        className: "text-primary-600 bg-transparent hover:bg-primary-100",
+        className: "text-blue-500 bg-transparent",
       },
     ],
     defaultVariants: {
