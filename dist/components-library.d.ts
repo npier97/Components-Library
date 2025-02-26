@@ -4,7 +4,7 @@ import { DetailedHTMLProps } from 'react';
 import { ElementType } from 'react';
 import { ForwardRefExoticComponent } from 'react';
 import { HTMLAttributes } from 'react';
-import { JSX as JSX_2 } from 'react/jsx-runtime';
+import { JSX } from 'react/jsx-runtime';
 import { RefAttributes } from 'react';
 import { VariantProps } from 'class-variance-authority';
 
@@ -31,7 +31,7 @@ export declare type InputProps = ComponentProps<"input"> & VariantProps<typeof i
 
 declare const inputStyles: (props?: ClassProp | undefined) => string;
 
-export declare const Navbar: ({ outline, size, fixed, shadowOnScroll, logo, brand, links, className, ...props }: NavProps) => JSX_2.Element;
+export declare const Navbar: ({ outline, size, fixed, shadowOnScroll, logo, brand, links, className, ...props }: NavProps) => JSX.Element;
 
 export declare type NavProps = ComponentProps<"nav"> & VariantProps<typeof navStyles> & {
     logo: string | React.ReactNode;
@@ -49,7 +49,7 @@ declare const navStyles: (props?: ({
     shadowOnScroll?: boolean | null | undefined;
 } & ClassProp) | undefined) => string;
 
-export declare const Stack: ({ className, ...props }: StackProps) => JSX_2.Element;
+export declare const Stack: ({ className, ...props }: StackProps) => JSX.Element;
 
 export declare type StackProps = BoxProps;
 
