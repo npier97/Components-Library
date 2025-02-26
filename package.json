@@ -9,6 +9,7 @@
   "main": "dist/components-library-umd.cjs",
   "module": "dist/components-library",
   "types": "dist/components-library.d.ts",
+  "style": "dist/components-library.css",
   "exports": {
     ".": {
       "import": "dist/components-library",
