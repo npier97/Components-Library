@@ -3041,7 +3041,7 @@ const S = (r) => {
       }
     )
   ] })
-), ce = Ee(({ ...r }, n) => /* @__PURE__ */ j.jsx("div", { ref: n, ...r })), it = ({ className: r, ...n }) => /* @__PURE__ */ j.jsx(ce, { className: he("flex flex-col items-start", r), ...n }), tt = ({ logo: r, brand: n }) => !r && !n ? null : /* @__PURE__ */ j.jsxs(ce, { className: "pr-6 flex gap-2", children: [
+), ce = Ee(({ ...r }, n) => /* @__PURE__ */ j.jsx("div", { ref: n, ...r })), it = ({ className: r, ...n }) => /* @__PURE__ */ j.jsx(ce, { className: he("flex flex-col items-start", r), ...n }), tt = ({ logo: r, brand: n }) => !r && !n ? null : /* @__PURE__ */ j.jsxs(ce, { className: "pr-6 flex gap-2 items-center", children: [
   r && /* @__PURE__ */ j.jsx(ce, { children: r }),
   n && /* @__PURE__ */ j.jsx(ce, { children: n })
 ] }), ot = ke(["w-full", "px-6", "py-4", "transition-all"], {
@@ -3101,7 +3101,7 @@ const S = (r) => {
         })
       ),
       ...b,
-      children: /* @__PURE__ */ j.jsxs(ce, { className: "font-bold text-xl flex justify-between", children: [
+      children: /* @__PURE__ */ j.jsxs(ce, { className: "font-bold text-xl flex justify-between items-center", children: [
         /* @__PURE__ */ j.jsx(tt, { logo: s, brand: d }),
         /* @__PURE__ */ j.jsx(ce, { children: u.map((w) => /* @__PURE__ */ j.jsx(
           "a",

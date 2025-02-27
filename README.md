@@ -18,5 +18,6 @@ Patch (1.0.0 → 1.0.1): Bug fixes.
 
 - `git add .`
 - `git commit -m "Your commit message"`
+- `pnpm build`
 - `pnpm version patch / minor / major` _(depending on your changes, see **Commands** above)_
 - `git push --follow-tags`
