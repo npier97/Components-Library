@@ -14,10 +14,10 @@ Patch (1.0.0 → 1.0.1): Bug fixes.
 - `pnpm version minor` _# Increments 1.0.0 → 1.1.0_
 - `pnpm version major` _# Increments 1.0.0 → 2.0.0_
 
-## Steps to push changes to main:
+## Steps to push changes:
 
+- `pnpm build`
 - `git add .`
 - `git commit -m "Your commit message"`
-- `pnpm build`
 - `pnpm version patch / minor / major` _(depending on your changes, see **Commands** above)_
 - `git push --follow-tags`
