@@ -84,6 +84,7 @@ export const Navbar = ({
               key={link.name}
               href={link.href}
               //TODO: add dynamic hover for the link later
+              //TODO: change padding-right of last item to 0
               className="text-base transition-colors pl-0 pr-6"
             >
               {link.name}

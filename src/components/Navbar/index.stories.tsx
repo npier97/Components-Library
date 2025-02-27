@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Navbar } from ".";
+import StorybookLogo from "../../assets/storybook.png";
 
 const meta: Meta<typeof Navbar> = {
   title: "Components/Navigation",
@@ -21,7 +22,7 @@ export const Solid: Story = {
     size: "md",
     fixed: false,
     shadowOnScroll: false,
-    logo: "Storybook",
+    brand: "Storybook",
     links: [
       {
         name: "Home",
@@ -42,7 +43,8 @@ export const Outline: Story = {
     size: "md",
     fixed: false,
     shadowOnScroll: false,
-    logo: "Storybook",
+    logo: <img src={StorybookLogo} alt="Logo" width={"20px"} />,
+    brand: "Storybook",
     links: [
       {
         name: "Home",

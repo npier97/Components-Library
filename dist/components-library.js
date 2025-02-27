@@ -1,5 +1,5 @@
 import lr, { forwardRef as Ee, useState as ir, useEffect as cr } from "react";
-var ye = { exports: {} }, me = {};
+var ve = { exports: {} }, pe = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -11,7 +11,7 @@ var ye = { exports: {} }, me = {};
  */
 var Ye;
 function dr() {
-  if (Ye) return me;
+  if (Ye) return pe;
   Ye = 1;
   var r = Symbol.for("react.transitional.element"), n = Symbol.for("react.fragment");
   function t(o, s, d) {
@@ -29,9 +29,9 @@ function dr() {
       props: d
     };
   }
-  return me.Fragment = n, me.jsx = t, me.jsxs = t, me;
+  return pe.Fragment = n, pe.jsx = t, pe.jsxs = t, pe;
 }
-var ge = {};
+var me = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -54,7 +54,7 @@ function ur() {
           return "Fragment";
         case B:
           return "Portal";
-        case fe:
+        case ue:
           return "Profiler";
         case M:
           return "StrictMode";
@@ -69,7 +69,7 @@ function ur() {
         ), e.$$typeof) {
           case X:
             return (e.displayName || "Context") + ".Provider";
-          case be:
+          case fe:
             return (e._context.displayName || "Context") + ".Consumer";
           case oe:
             var i = e.render;
@@ -180,14 +180,14 @@ function ur() {
                   try {
                     Reflect.construct(F, []);
                   } catch (U) {
-                    var ve = U;
+                    var xe = U;
                   }
                   Reflect.construct(e, [], F);
                 } else {
                   try {
                     F.call();
                   } catch (U) {
-                    ve = U;
+                    xe = U;
                   }
                   e.call(F.prototype);
                 }
@@ -195,14 +195,14 @@ function ur() {
                 try {
                   throw Error();
                 } catch (U) {
-                  ve = U;
+                  xe = U;
                 }
                 (F = e()) && typeof F.catch == "function" && F.catch(function() {
                 });
               }
             } catch (U) {
-              if (U && ve && typeof U.stack == "string")
-                return [U.stack, ve.stack];
+              if (U && xe && typeof U.stack == "string")
+                return [U.stack, xe.stack];
             }
             return [null, null];
           }
@@ -238,12 +238,12 @@ function ur() {
               if (E !== 1 || p !== 1)
                 do
                   if (E--, p--, 0 > p || z[E] !== ee[p]) {
-                    var pe = `
+                    var be = `
 ` + z[E].replace(
                       " at new ",
                       " at "
                     );
-                    return e.displayName && pe.includes("<anonymous>") && (pe = pe.replace("<anonymous>", e.displayName)), typeof e == "function" && Re.set(e, pe), pe;
+                    return e.displayName && be.includes("<anonymous>") && (be = be.replace("<anonymous>", e.displayName)), typeof e == "function" && Re.set(e, be), be;
                   }
                 while (1 <= E && 0 <= p);
               break;
@@ -337,7 +337,7 @@ function ur() {
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
     function C(e, i, c, x, T, E) {
-      if (typeof e == "string" || typeof e == "function" || e === f || e === fe || e === M || e === Z || e === V || e === v || typeof e == "object" && e !== null && (e.$$typeof === P || e.$$typeof === O || e.$$typeof === X || e.$$typeof === be || e.$$typeof === oe || e.$$typeof === xe || e.getModuleId !== void 0)) {
+      if (typeof e == "string" || typeof e == "function" || e === f || e === ue || e === M || e === Z || e === V || e === v || typeof e == "object" && e !== null && (e.$$typeof === P || e.$$typeof === O || e.$$typeof === X || e.$$typeof === fe || e.$$typeof === oe || e.$$typeof === he || e.getModuleId !== void 0)) {
         var p = i.children;
         if (p !== void 0)
           if (x)
@@ -425,19 +425,19 @@ Check the render method of \`` + c + "`."), i || (e = r(e)) && (i = `
 
 Check the top-level render call using <` + e + ">."), i;
     }
-    var H = lr, I = Symbol.for("react.transitional.element"), B = Symbol.for("react.portal"), f = Symbol.for("react.fragment"), M = Symbol.for("react.strict_mode"), fe = Symbol.for("react.profiler"), be = Symbol.for("react.consumer"), X = Symbol.for("react.context"), oe = Symbol.for("react.forward_ref"), Z = Symbol.for("react.suspense"), V = Symbol.for("react.suspense_list"), O = Symbol.for("react.memo"), P = Symbol.for("react.lazy"), v = Symbol.for("react.offscreen"), ne = Symbol.iterator, A = Symbol.for("react.client.reference"), k = H.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, K = Object.prototype.hasOwnProperty, $ = Object.assign, xe = Symbol.for("react.client.reference"), se = Array.isArray, L = 0, Q, ae, D, Me, Oe, Pe, Ge;
+    var H = lr, I = Symbol.for("react.transitional.element"), B = Symbol.for("react.portal"), f = Symbol.for("react.fragment"), M = Symbol.for("react.strict_mode"), ue = Symbol.for("react.profiler"), fe = Symbol.for("react.consumer"), X = Symbol.for("react.context"), oe = Symbol.for("react.forward_ref"), Z = Symbol.for("react.suspense"), V = Symbol.for("react.suspense_list"), O = Symbol.for("react.memo"), P = Symbol.for("react.lazy"), v = Symbol.for("react.offscreen"), ne = Symbol.iterator, A = Symbol.for("react.client.reference"), k = H.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, K = Object.prototype.hasOwnProperty, $ = Object.assign, he = Symbol.for("react.client.reference"), se = Array.isArray, L = 0, Q, ae, D, Me, Oe, Pe, Ge;
     o.__reactDisabledLog = !0;
     var Se, Ie, Ce = !1, Re = new (typeof WeakMap == "function" ? WeakMap : Map)(), ar = Symbol.for("react.client.reference"), Ve, $e = {}, Le = {}, We = {};
-    ge.Fragment = f, ge.jsx = function(e, i, c, x, T) {
+    me.Fragment = f, me.jsx = function(e, i, c, x, T) {
       return C(e, i, c, !1, x, T);
-    }, ge.jsxs = function(e, i, c, x, T) {
+    }, me.jsxs = function(e, i, c, x, T) {
       return C(e, i, c, !0, x, T);
     };
-  }()), ge;
+  }()), me;
 }
 var Be;
 function fr() {
-  return Be || (Be = 1, process.env.NODE_ENV === "production" ? ye.exports = dr() : ye.exports = ur()), ye.exports;
+  return Be || (Be = 1, process.env.NODE_ENV === "production" ? ve.exports = dr() : ve.exports = ur()), ve.exports;
 }
 var j = fr();
 function Ze(r) {
@@ -700,14 +700,14 @@ const S = (r) => {
   // For example, `hsl(0 0% 0%)` would be classified as a length without this check.
   // I could also use lookbehind assertion in `lengthUnitRegex` but that isn't supported widely enough.
   jr.test(r) && !zr.test(r)
-), _e = () => !1, Pr = (r) => Nr.test(r), Gr = (r) => _r.test(r), Ir = (r) => !a(r) && !l(r), Vr = (r) => de(r, nr, _e), a = (r) => er.test(r), te = (r) => de(r, sr, Or), Ae = (r) => de(r, Xr, g), $r = (r) => de(r, tr, _e), Lr = (r) => de(r, or, Gr), Wr = (r) => de(r, _e, Pr), l = (r) => rr.test(r), we = (r) => ue(r, sr), Yr = (r) => ue(r, Zr), Ur = (r) => ue(r, tr), Br = (r) => ue(r, nr), Fr = (r) => ue(r, or), qr = (r) => ue(r, Kr, !0), de = (r, n, t) => {
+), _e = () => !1, Pr = (r) => Nr.test(r), Gr = (r) => _r.test(r), Ir = (r) => !a(r) && !l(r), Vr = (r) => ce(r, nr, _e), a = (r) => er.test(r), te = (r) => ce(r, sr, Or), Ae = (r) => ce(r, Xr, g), $r = (r) => ce(r, tr, _e), Lr = (r) => ce(r, or, Gr), Wr = (r) => ce(r, _e, Pr), l = (r) => rr.test(r), ye = (r) => de(r, sr), Yr = (r) => de(r, Zr), Ur = (r) => de(r, tr), Br = (r) => de(r, nr), Fr = (r) => de(r, or), qr = (r) => de(r, Kr, !0), ce = (r, n, t) => {
   const o = er.exec(r);
   return o ? o[1] ? n(o[1]) : t(o[2]) : !1;
-}, ue = (r, n, t = !1) => {
+}, de = (r, n, t = !1) => {
   const o = rr.exec(r);
   return o ? o[1] ? n(o[1]) : t : !1;
 }, tr = (r) => r === "position", Jr = /* @__PURE__ */ new Set(["image", "url"]), or = (r) => Jr.has(r), Hr = /* @__PURE__ */ new Set(["length", "size", "percentage"]), nr = (r) => Hr.has(r), sr = (r) => r === "length", Xr = (r) => r === "number", Zr = (r) => r === "family-name", Kr = (r) => r === "shadow", Qr = () => {
-  const r = S("color"), n = S("font"), t = S("text"), o = S("font-weight"), s = S("tracking"), d = S("leading"), u = S("breakpoint"), m = S("container"), b = S("spacing"), h = S("radius"), y = S("shadow"), w = S("inset-shadow"), N = S("drop-shadow"), W = S("blur"), C = S("perspective"), R = S("aspect"), _ = S("ease"), G = S("animate"), J = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], H = () => ["bottom", "center", "left", "left-bottom", "left-top", "right", "right-bottom", "right-top", "top"], I = () => ["auto", "hidden", "clip", "visible", "scroll"], B = () => ["auto", "contain", "none"], f = () => [l, a, b], M = () => [ie, "full", "auto", ...f()], fe = () => [re, "none", "subgrid", l, a], be = () => ["auto", {
+  const r = S("color"), n = S("font"), t = S("text"), o = S("font-weight"), s = S("tracking"), d = S("leading"), u = S("breakpoint"), m = S("container"), b = S("spacing"), h = S("radius"), y = S("shadow"), w = S("inset-shadow"), N = S("drop-shadow"), W = S("blur"), C = S("perspective"), R = S("aspect"), _ = S("ease"), G = S("animate"), J = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], H = () => ["bottom", "center", "left", "left-bottom", "left-top", "right", "right-bottom", "right-top", "top"], I = () => ["auto", "hidden", "clip", "visible", "scroll"], B = () => ["auto", "contain", "none"], f = () => [l, a, b], M = () => [ie, "full", "auto", ...f()], ue = () => [re, "none", "subgrid", l, a], fe = () => ["auto", {
     span: ["full", re, l, a]
   }, l, a], X = () => [re, "auto", l, a], oe = () => ["auto", "min", "max", "fr", l, a], Z = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline"], V = () => ["start", "end", "center", "stretch"], O = () => ["auto", ...f()], P = () => [ie, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...f()], v = () => [r, l, a], ne = () => [Je, te], A = () => [
     // Deprecated since Tailwind CSS v4.0.0
@@ -717,7 +717,7 @@ const S = (r) => {
     h,
     l,
     a
-  ], k = () => ["", g, we, te], K = () => ["solid", "dashed", "dotted", "double"], $ = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], xe = () => [
+  ], k = () => ["", g, ye, te], K = () => ["solid", "dashed", "dotted", "double"], $ = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], he = () => [
     // Deprecated since Tailwind CSS v4.0.0
     "",
     "none",
@@ -1028,14 +1028,14 @@ const S = (r) => {
        * @see https://tailwindcss.com/docs/grid-template-columns
        */
       "grid-cols": [{
-        "grid-cols": fe()
+        "grid-cols": ue()
       }],
       /**
        * Grid Column Start / End
        * @see https://tailwindcss.com/docs/grid-column
        */
       "col-start-end": [{
-        col: be()
+        col: fe()
       }],
       /**
        * Grid Column Start
@@ -1056,14 +1056,14 @@ const S = (r) => {
        * @see https://tailwindcss.com/docs/grid-template-rows
        */
       "grid-rows": [{
-        "grid-rows": fe()
+        "grid-rows": ue()
       }],
       /**
        * Grid Row Start / End
        * @see https://tailwindcss.com/docs/grid-row
        */
       "row-start-end": [{
-        row: be()
+        row: fe()
       }],
       /**
        * Grid Row Start
@@ -1412,7 +1412,7 @@ const S = (r) => {
        * @see https://tailwindcss.com/docs/font-size
        */
       "font-size": [{
-        text: ["base", t, we, te]
+        text: ["base", t, ye, te]
       }],
       /**
        * Font Smoothing
@@ -2042,7 +2042,7 @@ const S = (r) => {
        * @see https://tailwindcss.com/docs/outline-width
        */
       "outline-w": [{
-        outline: ["", g, we, te]
+        outline: ["", g, ye, te]
       }],
       /**
        * Outline Color
@@ -2184,7 +2184,7 @@ const S = (r) => {
        * @see https://tailwindcss.com/docs/blur
        */
       blur: [{
-        blur: xe()
+        blur: he()
       }],
       /**
        * Brightness
@@ -2267,7 +2267,7 @@ const S = (r) => {
        * @see https://tailwindcss.com/docs/backdrop-blur
        */
       "backdrop-blur": [{
-        "backdrop-blur": xe()
+        "backdrop-blur": he()
       }],
       /**
        * Backdrop Brightness
@@ -2850,7 +2850,7 @@ const S = (r) => {
        * @see https://tailwindcss.com/docs/stroke-width
        */
       "stroke-w": [{
-        stroke: [g, we, te, Ae]
+        stroke: [g, ye, te, Ae]
       }],
       /**
        * Stroke
@@ -2925,7 +2925,7 @@ const S = (r) => {
     },
     orderSensitiveModifiers: ["before", "after", "placeholder", "file", "marker", "selection", "first-line", "first-letter", "backdrop", "*", "**"]
   };
-}, Dr = /* @__PURE__ */ Rr(Qr), he = (...r) => Dr(Ke(r)), He = (r) => typeof r == "boolean" ? `${r}` : r === 0 ? "0" : r, Xe = Ke, ke = (r, n) => (t) => {
+}, Dr = /* @__PURE__ */ Rr(Qr), ge = (...r) => Dr(Ke(r)), He = (r) => typeof r == "boolean" ? `${r}` : r === 0 ? "0" : r, Xe = Ke, ke = (r, n) => (t) => {
   var o;
   if ((n == null ? void 0 : n.variants) == null) return Xe(r, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
   const { variants: s, defaultVariants: d } = n, u = Object.keys(s).map((h) => {
@@ -3004,12 +3004,12 @@ const S = (r) => {
       colorscheme: "primary"
     }
   }
-), at = Ee(
+), lt = Ee(
   ({ variant: r, size: n, colorscheme: t, className: o, ...s }, d) => /* @__PURE__ */ j.jsx(
     "button",
     {
       ref: d,
-      className: he(et({ variant: r, size: n, colorscheme: t, className: o })),
+      className: ge(et({ variant: r, size: n, colorscheme: t, className: o })),
       ...s
     }
   )
@@ -3025,7 +3025,7 @@ const S = (r) => {
   "focus:border-transparent",
   "placeholder:text-gray-400",
   "placeholder:text-sm"
-]), lt = Ee(
+]), it = Ee(
   ({ label: r, name: n, className: t, ...o }, s) => /* @__PURE__ */ j.jsxs(j.Fragment, { children: [
     /* @__PURE__ */ j.jsx("label", { htmlFor: n, children: r }),
     /* @__PURE__ */ j.jsx(
@@ -3036,86 +3036,12 @@ const S = (r) => {
         id: n,
         name: n,
         autoComplete: "off",
-        className: he(rt({ className: t })),
+        className: ge(rt({ className: t })),
         ...o
       }
     )
   ] })
-), ce = Ee(({ ...r }, n) => /* @__PURE__ */ j.jsx("div", { ref: n, ...r })), it = ({ className: r, ...n }) => /* @__PURE__ */ j.jsx(ce, { className: he("flex flex-col items-start", r), ...n }), tt = ({ logo: r, brand: n }) => !r && !n ? null : /* @__PURE__ */ j.jsxs(ce, { className: "pr-6 flex gap-2 items-center", children: [
-  r && /* @__PURE__ */ j.jsx(ce, { children: r }),
-  n && /* @__PURE__ */ j.jsx(ce, { children: n })
-] }), ot = ke(["w-full", "px-6", "py-4", "transition-all"], {
-  variants: {
-    outline: {
-      true: "border-b-2",
-      false: "border-none"
-    },
-    size: {
-      sm: "px-4 py-2 text-sm",
-      md: "px-6 py-4 text-base",
-      lg: "px-8 py-6 text-lg"
-    },
-    fixed: {
-      true: "fixed top-0 z-50",
-      false: "relative"
-    },
-    shadowOnScroll: {
-      true: "shadow-lg",
-      false: "shadow-none"
-    }
-  },
-  defaultVariants: {
-    outline: !1,
-    size: "md",
-    fixed: !1,
-    shadowOnScroll: !1
-  }
-}), ct = ({
-  outline: r,
-  size: n,
-  fixed: t,
-  shadowOnScroll: o,
-  logo: s,
-  brand: d,
-  links: u,
-  className: m,
-  ...b
-}) => {
-  const [h, y] = ir(!1);
-  return cr(() => {
-    if (!o) return;
-    const w = () => {
-      y(window.scrollY > 1);
-    };
-    return window.addEventListener("scroll", w), () => window.removeEventListener("scroll", w);
-  }, [o]), /* @__PURE__ */ j.jsx(
-    "nav",
-    {
-      className: he(
-        ot({
-          outline: r,
-          size: n,
-          fixed: t,
-          shadowOnScroll: o && h,
-          className: m
-        })
-      ),
-      ...b,
-      children: /* @__PURE__ */ j.jsxs(ce, { className: "font-bold text-xl flex justify-between items-center", children: [
-        /* @__PURE__ */ j.jsx(tt, { logo: s, brand: d }),
-        /* @__PURE__ */ j.jsx(ce, { children: u.map((w) => /* @__PURE__ */ j.jsx(
-          "a",
-          {
-            href: w.href,
-            className: "text-base transition-colors pl-0 pr-6",
-            children: w.name
-          },
-          w.name
-        )) })
-      ] })
-    }
-  );
-}, nt = ke([], {
+), we = Ee(({ ...r }, n) => /* @__PURE__ */ j.jsx("div", { ref: n, ...r })), ct = ({ className: r, ...n }) => /* @__PURE__ */ j.jsx(we, { className: ge("flex flex-col items-start", r), ...n }), tt = ke([], {
   variants: {
     emphasis: {
       low: "text-gray-600 font-light"
@@ -3152,7 +3078,7 @@ const S = (r) => {
     size: "base",
     align: "left"
   }
-}), dt = Ee(
+}), ot = Ee(
   ({
     as: r = "p",
     emphasis: n,
@@ -3167,8 +3093,8 @@ const S = (r) => {
     r,
     {
       ref: h,
-      className: he(
-        nt({
+      className: ge(
+        tt({
           emphasis: n,
           size: t,
           weight: o,
@@ -3181,12 +3107,86 @@ const S = (r) => {
       ...b
     }
   )
-);
+), nt = ({ logo: r, brand: n }) => !r && !n ? null : /* @__PURE__ */ j.jsx("a", { href: "/", "aria-label": "Go to the homepage", children: /* @__PURE__ */ j.jsxs(we, { className: "pr-6 flex gap-2 items-center", children: [
+  r,
+  n && /* @__PURE__ */ j.jsx(ot, { children: n })
+] }) }), st = ke(["w-full", "px-6", "py-4", "transition-all"], {
+  variants: {
+    outline: {
+      true: "border-b-2",
+      false: "border-none"
+    },
+    size: {
+      sm: "px-4 py-2 text-sm",
+      md: "px-6 py-4 text-base",
+      lg: "px-8 py-6 text-lg"
+    },
+    fixed: {
+      true: "fixed top-0 z-50",
+      false: "relative"
+    },
+    shadowOnScroll: {
+      true: "shadow-lg",
+      false: "shadow-none"
+    }
+  },
+  defaultVariants: {
+    outline: !1,
+    size: "md",
+    fixed: !1,
+    shadowOnScroll: !1
+  }
+}), dt = ({
+  outline: r,
+  size: n,
+  fixed: t,
+  shadowOnScroll: o,
+  logo: s,
+  brand: d,
+  links: u,
+  className: m,
+  ...b
+}) => {
+  const [h, y] = ir(!1);
+  return cr(() => {
+    if (!o) return;
+    const w = () => {
+      y(window.scrollY > 1);
+    };
+    return window.addEventListener("scroll", w), () => window.removeEventListener("scroll", w);
+  }, [o]), /* @__PURE__ */ j.jsx(
+    "nav",
+    {
+      className: ge(
+        st({
+          outline: r,
+          size: n,
+          fixed: t,
+          shadowOnScroll: o && h,
+          className: m
+        })
+      ),
+      ...b,
+      children: /* @__PURE__ */ j.jsxs(we, { className: "font-bold text-xl flex justify-between items-center", children: [
+        /* @__PURE__ */ j.jsx(nt, { logo: s, brand: d }),
+        /* @__PURE__ */ j.jsx(we, { children: u.map((w) => /* @__PURE__ */ j.jsx(
+          "a",
+          {
+            href: w.href,
+            className: "text-base transition-colors pl-0 pr-6",
+            children: w.name
+          },
+          w.name
+        )) })
+      ] })
+    }
+  );
+};
 export {
-  ce as Box,
-  at as Button,
-  lt as Input,
-  ct as Navbar,
-  it as Stack,
-  dt as Text
+  we as Box,
+  lt as Button,
+  it as Input,
+  dt as Navbar,
+  ct as Stack,
+  ot as Text
 };
