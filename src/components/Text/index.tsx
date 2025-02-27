@@ -2,7 +2,7 @@ import { cn } from "@/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps, ElementType, forwardRef } from "react";
 
-const textStyles = cva("w-full", {
+const textStyles = cva([], {
   variants: {
     emphasis: {
       low: "text-gray-600 font-light",

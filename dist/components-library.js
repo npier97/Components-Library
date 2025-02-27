@@ -3115,7 +3115,7 @@ const S = (r) => {
       ] })
     }
   );
-}, nt = ke("w-full", {
+}, nt = ke([], {
   variants: {
     emphasis: {
       low: "text-gray-600 font-light"
