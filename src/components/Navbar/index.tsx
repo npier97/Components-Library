@@ -76,7 +76,7 @@ export const Navbar = ({
       )}
       {...props}
     >
-      <Box className="font-bold text-xl flex justify-between">
+      <Box className="font-bold text-xl flex justify-between items-center">
         <Brand logo={logo} brand={brand} />
         <Box>
           {links.map((link) => (
