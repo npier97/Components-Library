@@ -31,7 +31,7 @@ export declare type InputProps = ComponentProps<"input"> & VariantProps<typeof i
 
 declare const inputStyles: (props?: ClassProp | undefined) => string;
 
-export declare const Navbar: ({ outline, size, fixed, shadowOnScroll, logo, brand, links, className, ...props }: NavProps) => JSX.Element;
+export declare const Navbar: ({ outline, size, fixed, themeOnScroll, logo, brand, links, className, ...props }: NavProps) => JSX.Element;
 
 export declare type NavProps = ComponentProps<"nav"> & VariantProps<typeof navStyles> & {
     logo: string | React.ReactNode;
@@ -40,13 +40,17 @@ export declare type NavProps = ComponentProps<"nav"> & VariantProps<typeof navSt
         name: string;
         href: string;
     }[];
+    themeOnScroll?: {
+        textColor?: string;
+        backgroundColor?: string;
+        shadow?: string;
+    };
 };
 
 declare const navStyles: (props?: ({
     outline?: boolean | null | undefined;
     size?: "sm" | "md" | "lg" | null | undefined;
     fixed?: boolean | null | undefined;
-    shadowOnScroll?: boolean | null | undefined;
 } & ClassProp) | undefined) => string;
 
 export declare const Stack: ({ className, ...props }: StackProps) => JSX.Element;

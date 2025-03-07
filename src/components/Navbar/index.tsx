@@ -19,16 +19,11 @@ const navStyles = cva(["w-full", "px-6", "py-4", "transition-all"], {
       true: "fixed top-0 z-50",
       false: "relative",
     },
-    shadowOnScroll: {
-      true: "shadow-lg",
-      false: "shadow-none",
-    },
   },
   defaultVariants: {
     outline: false,
     size: "md",
     fixed: false,
-    shadowOnScroll: false,
   },
 });
 
@@ -37,13 +32,18 @@ export type NavProps = ComponentProps<"nav"> &
     logo: string | React.ReactNode;
     brand?: string;
     links: { name: string; href: string }[];
+    themeOnScroll?: {
+      textColor?: string;
+      backgroundColor?: string;
+      shadow?: string;
+    };
   };
 
 export const Navbar = ({
   outline,
   size,
   fixed,
-  shadowOnScroll,
+  themeOnScroll,
   logo,
   brand,
   links,
@@ -53,7 +53,7 @@ export const Navbar = ({
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    if (!shadowOnScroll) return;
+    if (!themeOnScroll) return;
 
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 1);
@@ -61,7 +61,7 @@ export const Navbar = ({
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [shadowOnScroll]);
+  }, [themeOnScroll]);
 
   return (
     <nav
@@ -70,9 +70,10 @@ export const Navbar = ({
           outline,
           size,
           fixed,
-          shadowOnScroll: shadowOnScroll && isScrolled,
           className,
-        })
+        }),
+        isScrolled &&
+          `${themeOnScroll?.textColor} ${themeOnScroll?.backgroundColor} ${themeOnScroll?.shadow}`
       )}
       {...props}
     >

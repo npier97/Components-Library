@@ -21,7 +21,6 @@ export const Solid: Story = {
     outline: false,
     size: "md",
     fixed: false,
-    shadowOnScroll: false,
     brand: "Storybook",
     links: [
       {
@@ -33,6 +32,11 @@ export const Solid: Story = {
         href: "#",
       },
     ],
+    themeOnScroll: {
+      textColor: "text-black",
+      backgroundColor: "bg-white",
+      shadow: "shadow-lg",
+    },
   },
 };
 
@@ -42,7 +46,6 @@ export const Outline: Story = {
     outline: true,
     size: "md",
     fixed: false,
-    shadowOnScroll: false,
     logo: <img src={StorybookLogo} alt="Logo" width={"20px"} />,
     brand: "Storybook",
     links: [
