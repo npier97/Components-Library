@@ -72,6 +72,7 @@ export const Navbar = ({
           fixed,
           className,
         }),
+        "transition-all duration-300 ease-in-out",
         isScrolled &&
           `${themeOnScroll?.textColor} ${themeOnScroll?.backgroundColor} ${themeOnScroll?.shadow}`
       )}
