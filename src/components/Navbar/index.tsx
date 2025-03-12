@@ -80,19 +80,20 @@ export const Navbar = ({
     >
       <Box className="font-bold text-xl flex justify-between items-center">
         <Brand logo={logo} brand={brand} />
-        <Box>
+        <ul className="flex">
           {links.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              //TODO: add dynamic hover for the link later
-              //TODO: change padding-right of last item to 0
-              className="text-base transition-colors pl-0 pr-6"
-            >
-              {link.name}
-            </a>
+            <li key={link.name}>
+              <a
+                href={link.href}
+                //TODO: add dynamic hover for the link later
+                //TODO: change padding-right of last item to 0
+                className="text-base transition-colors pl-0 pr-6"
+              >
+                {link.name}
+              </a>
+            </li>
           ))}
-        </Box>
+        </ul>
       </Box>
     </nav>
   );
