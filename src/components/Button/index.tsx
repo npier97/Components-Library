@@ -6,8 +6,9 @@ const buttonStyles = cva(
   [
     "rounded-md",
     "font-semibold",
-    "hover: cursor-pointer",
-    "focus: outline-none",
+    "hover:cursor-pointer",
+    "focus:outline-2",
+    "focus:outline-[#005fcc]",
     "disabled:cursor-not-allowed",
   ],
   {

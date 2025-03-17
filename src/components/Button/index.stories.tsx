@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Box } from "../Layout/Box";
-import { Button } from "./index";
+import { Button, ButtonProps } from "./index";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -46,7 +46,7 @@ export const Ghost: Story = {
 };
 
 export const Statuses: StoryObj<typeof Button> = {
-  render: (args) => (
+  render: (args: ButtonProps) => (
     <Box className="flex flex-col">
       <Button {...args} variant="solid" colorscheme="primary" className="my-2">
         Primary

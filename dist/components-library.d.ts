@@ -31,6 +31,17 @@ export declare type InputProps = ComponentProps<"input"> & VariantProps<typeof i
 
 declare const inputStyles: (props?: ClassProp | undefined) => string;
 
+export declare const Modal: ForwardRefExoticComponent<Omit<ModalProps, "ref"> & RefAttributes<HTMLDivElement>>;
+
+declare const modalContainerStyles: (props?: ClassProp | undefined) => string;
+
+export declare type ModalProps = ComponentProps<"div"> & VariantProps<typeof modalContainerStyles> & {
+    isOpen: boolean;
+    onClose: () => void;
+    title?: string;
+    contentClassName?: string;
+};
+
 export declare const Navbar: ({ outline, size, fixed, themeOnScroll, logo, brand, links, className, ...props }: NavProps) => JSX.Element;
 
 export declare type NavProps = ComponentProps<"nav"> & VariantProps<typeof navStyles> & {
