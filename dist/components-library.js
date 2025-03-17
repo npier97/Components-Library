@@ -2959,8 +2959,6 @@ const R = (r) => {
     "rounded-md",
     "font-semibold",
     "hover:cursor-pointer",
-    "focus:outline-2",
-    "focus:outline-[#005fcc]",
     "disabled:cursor-not-allowed"
   ],
   {
