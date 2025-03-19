@@ -48,6 +48,7 @@ export const Outline: Story = {
     fixed: false,
     logo: <img src={StorybookLogo} alt="Logo" width="20px" />,
     brand: "Storybook",
+    brandHref: "#",
     links: [
       {
         name: "Home",
