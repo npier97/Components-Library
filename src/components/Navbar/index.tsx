@@ -31,7 +31,7 @@ export type NavProps = ComponentProps<"nav"> &
   VariantProps<typeof navStyles> & {
     logo: string | React.ReactNode;
     brand?: string;
-    brandHref: string;
+    brandHref?: string;
     links: { name: string; href: string }[];
     themeOnScroll?: {
       textColor?: string;
