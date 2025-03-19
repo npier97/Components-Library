@@ -19,5 +19,6 @@ export const Default: Story = {
     title: "This is a test modal",
     children: "Hello World",
     onClose: () => console.log("closed"),
+    isOpen: true,
   },
 };
