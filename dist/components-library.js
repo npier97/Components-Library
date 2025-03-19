@@ -47,7 +47,7 @@ function fr() {
     function r(e) {
       if (e == null) return null;
       if (typeof e == "function")
-        return e.$$typeof === S ? null : e.displayName || e.name || null;
+        return e.$$typeof === T ? null : e.displayName || e.name || null;
       if (typeof e == "string") return e;
       switch (e) {
         case f:
@@ -165,7 +165,7 @@ function fr() {
       var x = null;
       x = k.H, k.H = null, s();
       try {
-        var T = {
+        var N = {
           DetermineComponentFrameRoot: function() {
             try {
               if (d) {
@@ -207,52 +207,52 @@ function fr() {
             return [null, null];
           }
         };
-        T.DetermineComponentFrameRoot.displayName = "DetermineComponentFrameRoot";
-        var E = Object.getOwnPropertyDescriptor(
-          T.DetermineComponentFrameRoot,
+        N.DetermineComponentFrameRoot.displayName = "DetermineComponentFrameRoot";
+        var w = Object.getOwnPropertyDescriptor(
+          N.DetermineComponentFrameRoot,
           "name"
         );
-        E && E.configurable && Object.defineProperty(
-          T.DetermineComponentFrameRoot,
+        w && w.configurable && Object.defineProperty(
+          N.DetermineComponentFrameRoot,
           "name",
           { value: "DetermineComponentFrameRoot" }
         );
-        var m = T.DetermineComponentFrameRoot(), Y = m[0], ie = m[1];
+        var m = N.DetermineComponentFrameRoot(), Y = m[0], ie = m[1];
         if (Y && ie) {
-          var N = Y.split(`
+          var z = Y.split(`
 `), ee = ie.split(`
 `);
-          for (m = E = 0; E < N.length && !N[E].includes(
+          for (m = w = 0; w < z.length && !z[w].includes(
             "DetermineComponentFrameRoot"
           ); )
-            E++;
+            w++;
           for (; m < ee.length && !ee[m].includes(
             "DetermineComponentFrameRoot"
           ); )
             m++;
-          if (E === N.length || m === ee.length)
-            for (E = N.length - 1, m = ee.length - 1; 1 <= E && 0 <= m && N[E] !== ee[m]; )
+          if (w === z.length || m === ee.length)
+            for (w = z.length - 1, m = ee.length - 1; 1 <= w && 0 <= m && z[w] !== ee[m]; )
               m--;
-          for (; 1 <= E && 0 <= m; E--, m--)
-            if (N[E] !== ee[m]) {
-              if (E !== 1 || m !== 1)
+          for (; 1 <= w && 0 <= m; w--, m--)
+            if (z[w] !== ee[m]) {
+              if (w !== 1 || m !== 1)
                 do
-                  if (E--, m--, 0 > m || N[E] !== ee[m]) {
+                  if (w--, m--, 0 > m || z[w] !== ee[m]) {
                     var me = `
-` + N[E].replace(
+` + z[w].replace(
                       " at new ",
                       " at "
                     );
                     return e.displayName && me.includes("<anonymous>") && (me = me.replace("<anonymous>", e.displayName)), typeof e == "function" && Re.set(e, me), me;
                   }
-                while (1 <= E && 0 <= m);
+                while (1 <= w && 0 <= m);
               break;
             }
         }
       } finally {
         Ce = !1, k.H = x, i(), Error.prepareStackTrace = u;
       }
-      return N = (N = e ? e.displayName || e.name : "") ? c(N) : "", typeof e == "function" && Re.set(e, N), N;
+      return z = (z = e ? e.displayName || e.name : "") ? c(z) : "", typeof e == "function" && Re.set(e, z), z;
     }
     function b(e) {
       if (e == null) return "";
@@ -296,7 +296,7 @@ function fr() {
       }
       return e.key !== void 0;
     }
-    function w(e, d) {
+    function R(e, d) {
       function u() {
         Ve || (Ve = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
@@ -308,22 +308,22 @@ function fr() {
         configurable: !0
       });
     }
-    function z() {
+    function E() {
       var e = r(this.type);
       return $e[e] || ($e[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function W(e, d, u, x, T, E) {
-      return u = E.ref, e = {
+    function W(e, d, u, x, N, w) {
+      return u = w.ref, e = {
         $$typeof: I,
         type: e,
         key: d,
-        props: E,
-        _owner: T
+        props: w,
+        _owner: N
       }, (u !== void 0 ? u : null) !== null ? Object.defineProperty(e, "ref", {
         enumerable: !1,
-        get: z
+        get: E
       }) : Object.defineProperty(e, "ref", { enumerable: !1, value: null }), e._store = {}, Object.defineProperty(e._store, "validated", {
         configurable: !1,
         enumerable: !1,
@@ -336,20 +336,20 @@ function fr() {
         value: null
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function j(e, d, u, x, T, E) {
+    function A(e, d, u, x, N, w) {
       if (typeof e == "string" || typeof e == "function" || e === f || e === be || e === M || e === Z || e === V || e === v || typeof e == "object" && e !== null && (e.$$typeof === O || e.$$typeof === P || e.$$typeof === X || e.$$typeof === pe || e.$$typeof === ne || e.$$typeof === ve || e.getModuleId !== void 0)) {
         var m = d.children;
         if (m !== void 0)
           if (x)
             if (ae(m)) {
               for (x = 0; x < m.length; x++)
-                A(m[x], e);
+                S(m[x], e);
               Object.freeze && Object.freeze(m);
             } else
               console.error(
                 "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
               );
-          else A(m, e);
+          else S(m, e);
       } else
         m = "", (e === void 0 || typeof e == "object" && e !== null && Object.keys(e).length === 0) && (m += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports."), e === null ? x = "null" : ae(e) ? x = "array" : e !== void 0 && e.$$typeof === I ? (x = "<" + (r(e.type) || "Unknown") + " />", m = " Did you accidentally export a JSX literal instead of a component?") : x = typeof e, console.error(
           "React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s",
@@ -358,8 +358,8 @@ function fr() {
         );
       if (K.call(d, "key")) {
         m = r(e);
-        var Y = Object.keys(d).filter(function(N) {
-          return N !== "key";
+        var Y = Object.keys(d).filter(function(z) {
+          return z !== "key";
         });
         x = 0 < Y.length ? "{key: someKey, " + Y.join(": ..., ") + ": ...}" : "{key: someKey}", Le[m + x] || (Y = 0 < Y.length ? "{" + Y.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
@@ -379,12 +379,12 @@ React keys must be passed directly to JSX without using spread:
         for (var ie in d)
           ie !== "key" && (u[ie] = d[ie]);
       } else u = d;
-      return m && w(
+      return m && R(
         u,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
-      ), W(e, m, E, T, g(), u);
+      ), W(e, m, w, N, g(), u);
     }
-    function A(e, d) {
+    function S(e, d) {
       if (typeof e == "object" && e && e.$$typeof !== lr) {
         if (ae(e))
           for (var u = 0; u < e.length; u++) {
@@ -408,8 +408,8 @@ React keys must be passed directly to JSX without using spread:
         e && e._owner != null && e._owner !== g() && (u = null, typeof e._owner.tag == "number" ? u = r(e._owner.type) : typeof e._owner.name == "string" && (u = e._owner.name), u = " It was passed a child from " + u + ".");
         var x = k.getCurrentStack;
         k.getCurrentStack = function() {
-          var T = b(e.type);
-          return x && (T += x() || ""), T;
+          var N = b(e.type);
+          return x && (N += x() || ""), N;
         }, console.error(
           'Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information.',
           d,
@@ -425,13 +425,13 @@ Check the render method of \`` + u + "`."), d || (e = r(e)) && (d = `
 
 Check the top-level render call using <` + e + ">."), d;
     }
-    var H = ir, I = Symbol.for("react.transitional.element"), B = Symbol.for("react.portal"), f = Symbol.for("react.fragment"), M = Symbol.for("react.strict_mode"), be = Symbol.for("react.profiler"), pe = Symbol.for("react.consumer"), X = Symbol.for("react.context"), ne = Symbol.for("react.forward_ref"), Z = Symbol.for("react.suspense"), V = Symbol.for("react.suspense_list"), P = Symbol.for("react.memo"), O = Symbol.for("react.lazy"), v = Symbol.for("react.offscreen"), se = Symbol.iterator, S = Symbol.for("react.client.reference"), k = H.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, K = Object.prototype.hasOwnProperty, $ = Object.assign, ve = Symbol.for("react.client.reference"), ae = Array.isArray, L = 0, Q, le, D, Me, Pe, Oe, Ge;
+    var H = ir, I = Symbol.for("react.transitional.element"), B = Symbol.for("react.portal"), f = Symbol.for("react.fragment"), M = Symbol.for("react.strict_mode"), be = Symbol.for("react.profiler"), pe = Symbol.for("react.consumer"), X = Symbol.for("react.context"), ne = Symbol.for("react.forward_ref"), Z = Symbol.for("react.suspense"), V = Symbol.for("react.suspense_list"), P = Symbol.for("react.memo"), O = Symbol.for("react.lazy"), v = Symbol.for("react.offscreen"), se = Symbol.iterator, T = Symbol.for("react.client.reference"), k = H.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, K = Object.prototype.hasOwnProperty, $ = Object.assign, ve = Symbol.for("react.client.reference"), ae = Array.isArray, L = 0, Q, le, D, Me, Pe, Oe, Ge;
     t.__reactDisabledLog = !0;
     var ke, Ie, Ce = !1, Re = new (typeof WeakMap == "function" ? WeakMap : Map)(), lr = Symbol.for("react.client.reference"), Ve, $e = {}, Le = {}, We = {};
-    he.Fragment = f, he.jsx = function(e, d, u, x, T) {
-      return j(e, d, u, !1, x, T);
-    }, he.jsxs = function(e, d, u, x, T) {
-      return j(e, d, u, !0, x, T);
+    he.Fragment = f, he.jsx = function(e, d, u, x, N) {
+      return A(e, d, u, !1, x, N);
+    }, he.jsxs = function(e, d, u, x, N) {
+      return A(e, d, u, !0, x, N);
     };
   }()), he;
 }
@@ -560,25 +560,25 @@ const Ne = "-", pr = (r) => {
   let t = (s) => {
     const i = [];
     let c = 0, p = 0, b = 0, g;
-    for (let j = 0; j < s.length; j++) {
-      let A = s[j];
+    for (let A = 0; A < s.length; A++) {
+      let S = s[A];
       if (c === 0 && p === 0) {
-        if (A === Te) {
-          i.push(s.slice(b, j)), b = j + vr;
+        if (S === Te) {
+          i.push(s.slice(b, A)), b = A + vr;
           continue;
         }
-        if (A === "/") {
-          g = j;
+        if (S === "/") {
+          g = A;
           continue;
         }
       }
-      A === "[" ? c++ : A === "]" ? c-- : A === "(" ? p++ : A === ")" && p--;
+      S === "[" ? c++ : S === "]" ? c-- : S === "(" ? p++ : S === ")" && p--;
     }
-    const y = i.length === 0 ? s : s.substring(b), w = wr(y), z = w !== y, W = g && g > b ? g - b : void 0;
+    const y = i.length === 0 ? s : s.substring(b), R = wr(y), E = R !== y, W = g && g > b ? g - b : void 0;
     return {
       modifiers: i,
-      hasImportantModifier: z,
-      baseClassName: w,
+      hasImportantModifier: E,
+      baseClassName: R,
       maybePostfixModifierPosition: W
     };
   };
@@ -626,29 +626,29 @@ const Ne = "-", pr = (r) => {
   let b = "";
   for (let g = p.length - 1; g >= 0; g -= 1) {
     const y = p[g], {
-      isExternal: w,
-      modifiers: z,
+      isExternal: R,
+      modifiers: E,
       hasImportantModifier: W,
-      baseClassName: j,
-      maybePostfixModifierPosition: A
+      baseClassName: A,
+      maybePostfixModifierPosition: S
     } = o(y);
-    if (w) {
+    if (R) {
       b = y + (b.length > 0 ? " " + b : b);
       continue;
     }
-    let _ = !!A, G = t(_ ? j.substring(0, A) : j);
+    let _ = !!S, G = t(_ ? A.substring(0, S) : A);
     if (!G) {
       if (!_) {
         b = y + (b.length > 0 ? " " + b : b);
         continue;
       }
-      if (G = t(j), !G) {
+      if (G = t(A), !G) {
         b = y + (b.length > 0 ? " " + b : b);
         continue;
       }
       _ = !1;
     }
-    const J = i(z).join(":"), H = W ? J + Se : J, I = H + G;
+    const J = i(E).join(":"), H = W ? J + Se : J, I = H + G;
     if (c.includes(I))
       continue;
     c.push(I);
@@ -678,7 +678,7 @@ const er = (r) => {
 function Ar(r, ...n) {
   let o, t, s, i = c;
   function c(b) {
-    const g = n.reduce((y, w) => w(y), r());
+    const g = n.reduce((y, R) => R(y), r());
     return o = kr(g), t = o.cache.get, s = o.cache.set, i = p, p(b);
   }
   function p(b) {
@@ -692,7 +692,7 @@ function Ar(r, ...n) {
     return i(jr.apply(null, arguments));
   };
 }
-const R = (r) => {
+const j = (r) => {
   const n = (o) => o[r] || [];
   return n.isThemeGetter = !0, n;
 }, rr = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, tr = /^\((?:(\w[\w-]*):)?(.+)\)$/i, Sr = /^\d+\/\d+$/, Tr = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, Nr = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, zr = /^(rgba?|hsla?|hwb|(ok)?(lab|lch))\(.+\)$/, _r = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, Mr = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, ce = (r) => Sr.test(r), h = (r) => !!r && !Number.isNaN(Number(r)), re = (r) => !!r && Number.isInteger(Number(r)), Je = (r) => r.endsWith("%") && h(r.slice(0, -1)), q = (r) => Tr.test(r), Pr = () => !0, Or = (r) => (
@@ -707,9 +707,9 @@ const R = (r) => {
   const t = tr.exec(r);
   return t ? t[1] ? n(t[1]) : o : !1;
 }, or = (r) => r === "position", Hr = /* @__PURE__ */ new Set(["image", "url"]), nr = (r) => Hr.has(r), Xr = /* @__PURE__ */ new Set(["length", "size", "percentage"]), sr = (r) => Xr.has(r), ar = (r) => r === "length", Zr = (r) => r === "number", Kr = (r) => r === "family-name", Qr = (r) => r === "shadow", Dr = () => {
-  const r = R("color"), n = R("font"), o = R("text"), t = R("font-weight"), s = R("tracking"), i = R("leading"), c = R("breakpoint"), p = R("container"), b = R("spacing"), g = R("radius"), y = R("shadow"), w = R("inset-shadow"), z = R("drop-shadow"), W = R("blur"), j = R("perspective"), A = R("aspect"), _ = R("ease"), G = R("animate"), J = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], H = () => ["bottom", "center", "left", "left-bottom", "left-top", "right", "right-bottom", "right-top", "top"], I = () => ["auto", "hidden", "clip", "visible", "scroll"], B = () => ["auto", "contain", "none"], f = () => [l, a, b], M = () => [ce, "full", "auto", ...f()], be = () => [re, "none", "subgrid", l, a], pe = () => ["auto", {
+  const r = j("color"), n = j("font"), o = j("text"), t = j("font-weight"), s = j("tracking"), i = j("leading"), c = j("breakpoint"), p = j("container"), b = j("spacing"), g = j("radius"), y = j("shadow"), R = j("inset-shadow"), E = j("drop-shadow"), W = j("blur"), A = j("perspective"), S = j("aspect"), _ = j("ease"), G = j("animate"), J = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], H = () => ["bottom", "center", "left", "left-bottom", "left-top", "right", "right-bottom", "right-top", "top"], I = () => ["auto", "hidden", "clip", "visible", "scroll"], B = () => ["auto", "contain", "none"], f = () => [l, a, b], M = () => [ce, "full", "auto", ...f()], be = () => [re, "none", "subgrid", l, a], pe = () => ["auto", {
     span: ["full", re, l, a]
-  }, l, a], X = () => [re, "auto", l, a], ne = () => ["auto", "min", "max", "fr", l, a], Z = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline"], V = () => ["start", "end", "center", "stretch"], P = () => ["auto", ...f()], O = () => [ce, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...f()], v = () => [r, l, a], se = () => [Je, te], S = () => [
+  }, l, a], X = () => [re, "auto", l, a], ne = () => ["auto", "min", "max", "fr", l, a], Z = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline"], V = () => ["start", "end", "center", "stretch"], P = () => ["auto", ...f()], O = () => [ce, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...f()], v = () => [r, l, a], se = () => [Je, te], T = () => [
     // Deprecated since Tailwind CSS v4.0.0
     "",
     "none",
@@ -756,7 +756,7 @@ const R = (r) => {
        * @see https://tailwindcss.com/docs/aspect-ratio
        */
       aspect: [{
-        aspect: ["auto", "square", ce, a, l, A]
+        aspect: ["auto", "square", ce, a, l, S]
       }],
       /**
        * Container
@@ -1752,105 +1752,105 @@ const R = (r) => {
        * @see https://tailwindcss.com/docs/border-radius
        */
       rounded: [{
-        rounded: S()
+        rounded: T()
       }],
       /**
        * Border Radius Start
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-s": [{
-        "rounded-s": S()
+        "rounded-s": T()
       }],
       /**
        * Border Radius End
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-e": [{
-        "rounded-e": S()
+        "rounded-e": T()
       }],
       /**
        * Border Radius Top
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-t": [{
-        "rounded-t": S()
+        "rounded-t": T()
       }],
       /**
        * Border Radius Right
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-r": [{
-        "rounded-r": S()
+        "rounded-r": T()
       }],
       /**
        * Border Radius Bottom
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-b": [{
-        "rounded-b": S()
+        "rounded-b": T()
       }],
       /**
        * Border Radius Left
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-l": [{
-        "rounded-l": S()
+        "rounded-l": T()
       }],
       /**
        * Border Radius Start Start
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-ss": [{
-        "rounded-ss": S()
+        "rounded-ss": T()
       }],
       /**
        * Border Radius Start End
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-se": [{
-        "rounded-se": S()
+        "rounded-se": T()
       }],
       /**
        * Border Radius End End
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-ee": [{
-        "rounded-ee": S()
+        "rounded-ee": T()
       }],
       /**
        * Border Radius End Start
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-es": [{
-        "rounded-es": S()
+        "rounded-es": T()
       }],
       /**
        * Border Radius Top Left
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-tl": [{
-        "rounded-tl": S()
+        "rounded-tl": T()
       }],
       /**
        * Border Radius Top Right
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-tr": [{
-        "rounded-tr": S()
+        "rounded-tr": T()
       }],
       /**
        * Border Radius Bottom Right
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-br": [{
-        "rounded-br": S()
+        "rounded-br": T()
       }],
       /**
        * Border Radius Bottom Left
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-bl": [{
-        "rounded-bl": S()
+        "rounded-bl": T()
       }],
       /**
        * Border Width
@@ -2080,7 +2080,7 @@ const R = (r) => {
        * @see https://tailwindcss.com/docs/box-shadow#adding-an-inset-shadow
        */
       "inset-shadow": [{
-        "inset-shadow": ["none", l, a, w]
+        "inset-shadow": ["none", l, a, R]
       }],
       /**
        * Inset Box Shadow Color
@@ -2209,7 +2209,7 @@ const R = (r) => {
           // Deprecated since Tailwind CSS v4.0.0
           "",
           "none",
-          z,
+          E,
           l,
           a
         ]
@@ -2430,7 +2430,7 @@ const R = (r) => {
        * @see https://tailwindcss.com/docs/perspective
        */
       perspective: [{
-        perspective: [j, l, a]
+        perspective: [A, l, a]
       }],
       /**
        * Perspective Origin
@@ -2929,28 +2929,28 @@ const R = (r) => {
   var t;
   if ((n == null ? void 0 : n.variants) == null) return Xe(r, o == null ? void 0 : o.class, o == null ? void 0 : o.className);
   const { variants: s, defaultVariants: i } = n, c = Object.keys(s).map((g) => {
-    const y = o == null ? void 0 : o[g], w = i == null ? void 0 : i[g];
+    const y = o == null ? void 0 : o[g], R = i == null ? void 0 : i[g];
     if (y === null) return null;
-    const z = He(y) || He(w);
-    return s[g][z];
+    const E = He(y) || He(R);
+    return s[g][E];
   }), p = o && Object.entries(o).reduce((g, y) => {
-    let [w, z] = y;
-    return z === void 0 || (g[w] = z), g;
+    let [R, E] = y;
+    return E === void 0 || (g[R] = E), g;
   }, {}), b = n == null || (t = n.compoundVariants) === null || t === void 0 ? void 0 : t.reduce((g, y) => {
-    let { class: w, className: z, ...W } = y;
-    return Object.entries(W).every((j) => {
-      let [A, _] = j;
+    let { class: R, className: E, ...W } = y;
+    return Object.entries(W).every((A) => {
+      let [S, _] = A;
       return Array.isArray(_) ? _.includes({
         ...i,
         ...p
-      }[A]) : {
+      }[S]) : {
         ...i,
         ...p
-      }[A] === _;
+      }[S] === _;
     }) ? [
       ...g,
-      w,
-      z
+      R,
+      E
     ] : g;
   }, []);
   return Xe(r, c, b, o == null ? void 0 : o.class, o == null ? void 0 : o.className);
@@ -3152,7 +3152,7 @@ const R = (r) => {
       ...b
     }
   )
-), lt = ({ logo: r, brand: n }) => !r && !n ? null : /* @__PURE__ */ C.jsx("a", { href: "/", "aria-label": "Go to the homepage", children: /* @__PURE__ */ C.jsxs(_e, { className: "pr-6 flex gap-2 items-center", children: [
+), lt = ({ logo: r, brand: n, href: o }) => !r && !n ? null : /* @__PURE__ */ C.jsx("a", { href: o, "aria-label": "Go to the homepage", children: /* @__PURE__ */ C.jsxs(_e, { className: "pr-6 flex gap-2 items-center", children: [
   r,
   n && /* @__PURE__ */ C.jsx(at, { children: n })
 ] }) }), it = fe(["w-full", "px-6", "py-4", "transition-all"], {
@@ -3183,17 +3183,18 @@ const R = (r) => {
   themeOnScroll: t,
   logo: s,
   brand: i,
-  links: c,
-  className: p,
-  ...b
+  brandHref: c,
+  links: p,
+  className: b,
+  ...g
 }) => {
-  const [g, y] = dr(!1);
+  const [y, R] = dr(!1);
   return Ze(() => {
     if (!t) return;
-    const w = () => {
-      y(window.scrollY > 1);
+    const E = () => {
+      R(window.scrollY > 1);
     };
-    return window.addEventListener("scroll", w), () => window.removeEventListener("scroll", w);
+    return window.addEventListener("scroll", E), () => window.removeEventListener("scroll", E);
   }, [t]), /* @__PURE__ */ C.jsx(
     "nav",
     {
@@ -3202,22 +3203,22 @@ const R = (r) => {
           outline: r,
           size: n,
           fixed: o,
-          className: p
+          className: b
         }),
         "transition-all duration-300 ease-in-out",
-        g && `${t == null ? void 0 : t.textColor} ${t == null ? void 0 : t.backgroundColor} ${t == null ? void 0 : t.shadow}`
+        y && `${t == null ? void 0 : t.textColor} ${t == null ? void 0 : t.backgroundColor} ${t == null ? void 0 : t.shadow}`
       ),
-      ...b,
+      ...g,
       children: /* @__PURE__ */ C.jsxs(_e, { className: "font-bold text-xl flex justify-between items-center", children: [
-        /* @__PURE__ */ C.jsx(lt, { logo: s, brand: i }),
-        /* @__PURE__ */ C.jsx("ul", { className: "flex", children: c.map((w) => /* @__PURE__ */ C.jsx("li", { children: /* @__PURE__ */ C.jsx(
+        /* @__PURE__ */ C.jsx(lt, { logo: s, brand: i, href: c }),
+        /* @__PURE__ */ C.jsx("ul", { className: "flex", children: p.map((E) => /* @__PURE__ */ C.jsx("li", { children: /* @__PURE__ */ C.jsx(
           "a",
           {
-            href: w.href,
+            href: E.href,
             className: "text-base transition-colors pl-0 pr-6",
-            children: w.name
+            children: E.name
           }
-        ) }, w.name)) })
+        ) }, E.name)) })
       ] })
     }
   );

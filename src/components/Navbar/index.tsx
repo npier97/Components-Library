@@ -31,6 +31,7 @@ export type NavProps = ComponentProps<"nav"> &
   VariantProps<typeof navStyles> & {
     logo: string | React.ReactNode;
     brand?: string;
+    brandHref: string;
     links: { name: string; href: string }[];
     themeOnScroll?: {
       textColor?: string;
@@ -46,6 +47,7 @@ export const Navbar = ({
   themeOnScroll,
   logo,
   brand,
+  brandHref,
   links,
   className,
   ...props
@@ -79,7 +81,7 @@ export const Navbar = ({
       {...props}
     >
       <Box className="font-bold text-xl flex justify-between items-center">
-        <Brand logo={logo} brand={brand} />
+        <Brand logo={logo} brand={brand} href={brandHref} />
         <ul className="flex">
           {links.map((link) => (
             <li key={link.name}>

@@ -42,11 +42,12 @@ export declare type ModalProps = ComponentProps<"div"> & VariantProps<typeof mod
     contentClassName?: string;
 };
 
-export declare const Navbar: ({ outline, size, fixed, themeOnScroll, logo, brand, links, className, ...props }: NavProps) => JSX.Element;
+export declare const Navbar: ({ outline, size, fixed, themeOnScroll, logo, brand, brandHref, links, className, ...props }: NavProps) => JSX.Element;
 
 export declare type NavProps = ComponentProps<"nav"> & VariantProps<typeof navStyles> & {
     logo: string | React.ReactNode;
     brand?: string;
+    brandHref: string;
     links: {
         name: string;
         href: string;
