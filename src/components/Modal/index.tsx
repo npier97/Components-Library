@@ -5,7 +5,6 @@ import { ComponentProps, forwardRef, useEffect, useRef } from "react";
 const modalContainerStyles = cva([
   "m-4",
   "fixed",
-  "md:absolute",
   "inset-0",
   "flex",
   "items-center",

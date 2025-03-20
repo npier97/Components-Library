@@ -3043,7 +3043,6 @@ const j = (r) => {
 ), _e = xe(({ ...r }, n) => /* @__PURE__ */ C.jsx("div", { ref: n, ...r })), ft = ({ className: r, ...n }) => /* @__PURE__ */ C.jsx(_e, { className: oe("flex flex-col items-start", r), ...n }), ot = fe([
   "m-4",
   "fixed",
-  "md:absolute",
   "inset-0",
   "flex",
   "items-center",
