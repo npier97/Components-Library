@@ -3,9 +3,10 @@ import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps, forwardRef, useEffect, useRef } from "react";
 
 const modalContainerStyles = cva([
+  "m-4",
   "fixed",
   "md:absolute",
-  "md:-translate-y-1/2",
+  "inset-0",
   "flex",
   "items-center",
   "justify-center",
