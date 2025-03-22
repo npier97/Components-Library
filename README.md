@@ -2,6 +2,8 @@
 
 Welcome to my Component Library, a collection of reusable UI components built with React, TypeScript, and TailwindCSS. This library is designed to enhance development efficiency, maintain design consistency, and improve the overall user experience.
 
+![Demo](https://github.com/npier97/Components-Library/tree/main/src/assets/components-library.gif)
+
 # Versioning (TBD)
 
 - Major (1.0.0 → 2.0.0): Breaking changes.
