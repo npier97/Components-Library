@@ -1,6 +1,6 @@
 import { cn } from "@/utils";
 import { cva, VariantProps } from "class-variance-authority";
-import { ComponentProps, forwardRef, useEffect, useRef } from "react";
+import { ComponentProps, useEffect, useRef } from "react";
 
 const modalContainerStyles = cva([
   "m-4",
@@ -31,51 +31,48 @@ export type ModalProps = ComponentProps<"div"> &
     contentClassName?: string;
   };
 
-export const Modal = forwardRef<HTMLDivElement, ModalProps>(
-  ({
-    isOpen,
-    onClose,
-    title,
-    children,
-    contentClassName,
-    className,
-    ...props
-  }) => {
-    const modalRef = useRef<HTMLDivElement | null>(null);
+export const Modal = ({
+  isOpen,
+  onClose,
+  children,
+  contentClassName,
+  className,
+  ...props
+}: ModalProps) => {
+  const modalRef = useRef<HTMLDivElement | null>(null);
 
-    useEffect(() => {
-      const handleClickOutside = (event: MouseEvent) => {
-        if (
-          modalRef.current &&
-          !modalRef.current.contains(event.target as Node)
-        ) {
-          onClose();
-        }
-      };
-
-      if (isOpen) {
-        document.addEventListener("mousedown", handleClickOutside);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        modalRef.current &&
+        !modalRef.current.contains(event.target as Node)
+      ) {
+        onClose();
       }
+    };
 
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, [isOpen, onClose]);
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
 
-    if (!isOpen) return null;
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen, onClose]);
 
-    return (
-      <div
-        ref={modalRef}
-        className={cn(modalContainerStyles({ className }))}
-        {...props}
-        role="dialog"
-        aria-modal="true"
-      >
-        <div className={cn(modalContentStyles(), contentClassName)}>
-          <div>{children}</div>
-        </div>
+  if (!isOpen) return null;
+
+  return (
+    <div
+      ref={modalRef}
+      className={cn(modalContainerStyles({ className }))}
+      {...props}
+      role="dialog"
+      aria-modal="true"
+    >
+      <div className={cn(modalContentStyles(), contentClassName)}>
+        <div>{children}</div>
       </div>
-    );
-  }
-);
+    </div>
+  );
+};

@@ -1,18 +1,14 @@
 import { ClassProp } from 'class-variance-authority/types';
 import { ComponentProps } from 'react';
-import { DetailedHTMLProps } from 'react';
 import { ElementType } from 'react';
-import { ForwardRefExoticComponent } from 'react';
-import { HTMLAttributes } from 'react';
 import { JSX } from 'react/jsx-runtime';
-import { RefAttributes } from 'react';
 import { VariantProps } from 'class-variance-authority';
 
-export declare const Box: ForwardRefExoticComponent<Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & RefAttributes<HTMLDivElement>>;
+export declare const Box: ({ ref, ...props }: BoxProps) => JSX.Element;
 
 export declare type BoxProps = ComponentProps<"div">;
 
-export declare const Button: ForwardRefExoticComponent<Omit<ButtonProps, "ref"> & RefAttributes<HTMLButtonElement>>;
+export declare const Button: ({ ref, variant, size, colorscheme, className, ...props }: ButtonProps) => JSX.Element;
 
 export declare type ButtonProps = ComponentProps<"button"> & VariantProps<typeof buttonStyles>;
 
@@ -22,7 +18,7 @@ declare const buttonStyles: (props?: ({
     colorscheme?: "primary" | "secondary" | "success" | "warning" | "danger" | null | undefined;
 } & ClassProp) | undefined) => string;
 
-export declare const Input: ForwardRefExoticComponent<Omit<InputProps, "ref"> & RefAttributes<HTMLInputElement>>;
+export declare const Input: ({ ref, label, name, className, ...props }: InputProps) => JSX.Element;
 
 export declare type InputProps = ComponentProps<"input"> & VariantProps<typeof inputStyles> & {
     label?: string;
@@ -31,7 +27,7 @@ export declare type InputProps = ComponentProps<"input"> & VariantProps<typeof i
 
 declare const inputStyles: (props?: ClassProp | undefined) => string;
 
-export declare const Modal: ForwardRefExoticComponent<Omit<ModalProps, "ref"> & RefAttributes<HTMLDivElement>>;
+export declare const Modal: ({ isOpen, onClose, children, contentClassName, className, ...props }: ModalProps) => JSX.Element | null;
 
 declare const modalContainerStyles: (props?: ClassProp | undefined) => string;
 
@@ -69,7 +65,7 @@ export declare const Stack: ({ className, ...props }: StackProps) => JSX.Element
 
 export declare type StackProps = BoxProps;
 
-declare const Text_2: ForwardRefExoticComponent<Omit<TextProps, "ref"> & RefAttributes<HTMLElement>>;
+declare const Text_2: ({ ref, as: Component, emphasis, size, weight, align, italic, underline, className, ...props }: TextProps) => JSX.Element;
 export { Text_2 as Text }
 
 export declare type TextProps = {

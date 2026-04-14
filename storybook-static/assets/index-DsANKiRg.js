@@ -1,1 +1,0 @@
-import{j as s}from"./jsx-runtime-D_zvdyIk.js";import{r as t}from"./iframe-C5yWRVTU.js";const e=t.forwardRef(({...o},r)=>s.jsx("div",{ref:r,...o}));e.__docgenInfo={description:"",methods:[],displayName:"Box"};export{e as B};

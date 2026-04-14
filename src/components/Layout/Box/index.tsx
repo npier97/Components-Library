@@ -1,7 +1,7 @@
-import { ComponentProps, forwardRef } from "react";
+import { ComponentProps } from "react";
 
 export type BoxProps = ComponentProps<"div">;
 
-export const Box = forwardRef<HTMLDivElement, BoxProps>(({ ...props }, ref) => (
+export const Box = ({ ref, ...props }: BoxProps) => (
   <div ref={ref} {...props} />
-));
+);

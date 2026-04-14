@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime-u17CrQMm.js";import{c as a}from"./index-cIuiytXw.js";import{B as m}from"./index-DTHCuK_Y.js";const e=({className:o,...s})=>t.jsx(m,{className:a("flex flex-col items-start",o),...s});e.__docgenInfo={description:"",methods:[],displayName:"Stack"};export{e as S};

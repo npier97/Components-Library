@@ -1,6 +1,6 @@
 import { cn } from "@/utils";
 import { cva, VariantProps } from "class-variance-authority";
-import { ComponentProps, forwardRef } from "react";
+import { ComponentProps } from "react";
 
 const inputStyles = cva([
   "w-full",
@@ -22,19 +22,23 @@ export type InputProps = ComponentProps<"input"> &
     name: string;
   };
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, name, className, ...props }, ref) => (
-    <>
-      <label htmlFor={name}>{label}</label>
-      <input
-        ref={ref}
-        type="text"
-        id={name}
-        name={name}
-        autoComplete="off"
-        className={cn(inputStyles({ className }))}
-        {...props}
-      />
-    </>
-  )
+export const Input = ({
+  ref,
+  label,
+  name,
+  className,
+  ...props
+}: InputProps) => (
+  <>
+    <label htmlFor={name}>{label}</label>
+    <input
+      ref={ref}
+      type="text"
+      id={name}
+      name={name}
+      autoComplete="off"
+      className={cn(inputStyles({ className }))}
+      {...props}
+    />
+  </>
 );

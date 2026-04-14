@@ -1,6 +1,6 @@
 import { cn } from "@/utils";
 import { cva, VariantProps } from "class-variance-authority";
-import { ComponentProps, ElementType, forwardRef } from "react";
+import { ComponentProps, ElementType } from "react";
 
 const textStyles = cva([], {
   variants: {
@@ -46,35 +46,31 @@ export type TextProps = {
 } & ComponentProps<"p"> &
   VariantProps<typeof textStyles>;
 
-export const Text = forwardRef<HTMLElement, TextProps>(
-  (
-    {
-      as: Component = "p",
-      emphasis,
-      size,
-      weight,
-      align,
-      italic,
-      underline,
-      className,
-      ...props
-    },
-    ref
-  ) => (
-    <Component
-      ref={ref}
-      className={cn(
-        textStyles({
-          emphasis,
-          size,
-          weight,
-          align,
-          italic,
-          underline,
-          className,
-        })
-      )}
-      {...props}
-    />
-  )
+export const Text = ({
+  ref,
+  as: Component = "p",
+  emphasis,
+  size,
+  weight,
+  align,
+  italic,
+  underline,
+  className,
+  ...props
+}: TextProps) => (
+  <Component
+    ref={ref}
+    className={cn(
+      textStyles({
+        emphasis,
+        size,
+        weight,
+        align,
+        italic,
+        underline,
+        className,
+      }),
+    )}
+    {...props}
+  />
 );

@@ -6,9 +6,8 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     },
 
     /* Bundler mode */
@@ -17,6 +16,7 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "declaration": true,
+    "rootDir": "./src",
     "declarationDir": "./dist",
     "emitDeclarationOnly": true,
     "jsx": "react-jsx",
