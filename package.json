@@ -14,7 +14,8 @@
     ".": {
       "import": "dist/components-library",
       "require": "dist/components-library-umd.cjs"
-    }
+    },
+    "./styles.css": "./dist/components-library.css"
   },
   "scripts": {
     "dev": "vite",
