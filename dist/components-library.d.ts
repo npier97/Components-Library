@@ -1,7 +1,7 @@
 import { ClassProp } from 'class-variance-authority/types';
 import { ComponentProps } from 'react';
 import { ElementType } from 'react';
-import { JSX } from 'react/jsx-runtime';
+import { JSX } from 'react';
 import { VariantProps } from 'class-variance-authority';
 
 export declare const Box: ({ ref, ...props }: BoxProps) => JSX.Element;

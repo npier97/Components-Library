@@ -16,7 +16,7 @@ const config: StorybookConfig = {
   viteFinal: async (config) => {
     config.plugins?.push(
       tsconfigPaths({
-        projects: [path.resolve(path.dirname(__dirname), "tsconfig.json")],
+        projects: [path.resolve(path.dirname(import.meta.dirname), "tsconfig.json")],
       })
     );
 

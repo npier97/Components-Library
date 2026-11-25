@@ -8,21 +8,22 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(import.meta.dirname, "./src"),
     },
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, "./src/components/index.tsx"),
+      entry: path.resolve(import.meta.dirname, "./src/components/index.tsx"),
       name: "Components Library",
       fileName: "components-library",
     },
-    rollupOptions: {
-      external: ["react", "react-dom"],
+    rolldownOptions: {
+      external: ["react", "react-dom", "react/jsx-runtime"],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
+          "react/jsx-runtime": "ReactJSXRuntime",
         },
       },
     },
@@ -30,6 +31,6 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    dts({ rollupTypes: true, tsconfigPath: "./tsconfig.app.json" }),
+    dts({ bundleTypes: true, tsconfigPath: "./tsconfig.app.json" }),
   ],
 });
